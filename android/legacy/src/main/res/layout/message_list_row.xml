@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <import type="com.mas.mobile.presentation.activity.converter.DateConverter"/>
+        <import type="android.view.View"/>
+
+        <variable name="message"
+            type="com.mas.mobile.domain.message.Message"/>
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/messageListDay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:textAppearance="?attr/textAppearanceSubtitle1"
+            android:textStyle="bold"
+            app:hintEnabled="false"/>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/messageListRowCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            android:layout_marginBottom="1dp"
+            android:layout_marginStart="1dp"
+            android:layout_marginEnd="1dp"
+            android:clickable="false"
+            android:background="@android:color/transparent">
+
+            <LinearLayout
+                android:id="@+id/messageListRowLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="2dp"
+                android:paddingBottom="2dp"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/messageListRowOkIcon"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_margin="2dp"
+                    android:layout_gravity="top"
+                    android:src="@drawable/ic_check_24"
+                    android:contentDescription="@string/content_icon"
+                    app:tint="@color/colorGreen" />
+
+                <ImageView
+                    android:id="@+id/messageListRowQuestionIcon"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_margin="2dp"
+                    android:layout_gravity="top"
+                    android:src="@drawable/ic_question_24"
+                    android:contentDescription="@string/content_icon"
+                    app:tint="@color/colorYellow"/>
+
+                <ImageView
+                    android:id="@+id/messageListRowInfoIcon"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_margin="2dp"
+                    android:layout_gravity="top"
+                    android:src="@drawable/ic_radar_24"
+                    android:contentDescription="@string/content_icon"
+                    app:tint="@color/colorBlue"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginEnd="4dp"
+                    android:orientation="vertical">
+
+                    <!-- Sender line -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?attr/textAppearanceSubtitle1"
+                            android:text="@{message.sender}"/>
+
+                        <View
+                            android:layout_width="2dp"
+                            android:layout_height="2dp"/>
+
+                        <ImageView
+                            android:id="@+id/messageListNewMessage"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:scaleType="fitStart"
+                            android:src="@drawable/ic_dot_24"
+                            android:visibility="@{message.isNew ? View.VISIBLE : View.GONE}"
+                            android:contentDescription="@string/content_new_message" />
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="2dp"
+                            android:layout_weight="1"/>
+                    </LinearLayout>
+
+                    <!-- Time line -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@{DateConverter.dateTimeToTimeAsString(message.receivedAt)}"
+                        app:hintEnabled="false"/>
+
+                    <!-- Message line -->
+                    <TextView
+                        android:id="@+id/message_list_row_message"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@{message.text}"
+                        android:textAppearance="?attr/textAppearanceBody2"
+                        app:hintEnabled="false"/>
+
+                    <!-- Category -->
+                    <LinearLayout
+                        android:id="@+id/messageListCategoryLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_marginEnd="2dp"
+                            android:background="@android:color/transparent"
+                            android:contentDescription="@string/menu_categories"
+                            android:minWidth="24dp"
+                            android:minHeight="24dp"
+                            app:tint="@color/colorDeepGray"
+                            app:srcCompat="@drawable/ic_categories_24"/>
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0" />
+                        <TextView
+                            android:id="@+id/messageListRowCategory"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:textAppearance="?attr/textAppearanceSubtitle1"
+                            android:text="@string/menu_categories" />
+                    </LinearLayout>
+
+                    <!-- Buttons Matched -->
+                    <LinearLayout
+                        android:id="@+id/messageListMatchedLayout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            style="@style/Button.Card.Borderless"
+                            android:id="@+id/messageListMatchedButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/btn_message_category" />
+                    </LinearLayout>
+
+                    <!-- Buttons Recommended -->
+                    <LinearLayout
+                        android:id="@+id/messageListRecommendedLayout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            style="@style/Button.Card.Borderless"
+                            android:id="@+id/messageListAcceptButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/btn_message_accept" />
+
+                        <View
+                            android:layout_width="12dp"
+                            android:layout_height="2dp"/>
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            style="@style/Button.Card.Borderless"
+                            android:id="@+id/messageListBlacklistButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/btn_message_blacklist" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+</layout>

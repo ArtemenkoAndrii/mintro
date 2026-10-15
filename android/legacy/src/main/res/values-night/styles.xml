@@ -1,0 +1,7 @@
+<resources>
+    <style name="DefaultActionBar" parent="ThemeOverlay.MaterialComponents.Dark.ActionBar">
+    </style>
+
+    <style name="DefaultActionBarPopup" parent="ThemeOverlay.MaterialComponents.Dark.ActionBar">
+    </style>
+</resources>

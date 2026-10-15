@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id = "@+id/nav_home"
+        android:title = "@string/menu_home"
+        android:icon="@drawable/ic_home_24"
+        android:orderInCategory = "100"
+        />
+    <item
+        android:id = "@+id/nav_spending_list"
+        android:title = "@string/menu_spending"
+        android:icon="@drawable/ic_spending"
+        android:orderInCategory = "101"
+        />
+    <item
+        android:id = "@+id/nav_message_list_fragment"
+        android:title = "@string/menu_messages"
+        android:icon="@drawable/ic_message_24"
+        android:orderInCategory = "102"
+        />
+    <item
+        android:id = "@+id/nav_categories"
+        android:title = "@string/menu_categories"
+        android:icon="@drawable/ic_categories_24"
+        android:orderInCategory = "103"
+        />
+
+    <item
+        android:id = "@+id/nav_budget_list"
+        android:title = "@string/menu_budgets"
+        android:icon="@drawable/ic_budget"
+        android:orderInCategory = "104"
+        />
+    <item
+        android:id = "@+id/nav_scheduled"
+        android:title = "@string/menu_scheduled"
+        android:icon="@drawable/ic_scheduled_24"
+        android:orderInCategory = "105"
+        />
+    <item
+        android:id = "@+id/nav_analytics"
+        android:title = "@string/menu_budget_analytics"
+        android:icon="@drawable/ic_analytics_24"
+        android:orderInCategory = "106"
+        />
+    <item
+        android:id = "@+id/nav_settings"
+        android:title = "@string/menu_settings"
+        android:icon="@drawable/ic_settings_24"
+        android:orderInCategory = "107"
+        />
+</menu>

@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "deny": [
+      "Edit(/android/legacy/**)",
+      "Read(**/*.keystore)",
+      "Read(**/*.jks)"
+    ]
+  }
+}

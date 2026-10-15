@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable name="expenditure"
+            type="com.mas.mobile.domain.budget.Expenditure"/>
+        <variable name="callback"
+            type="android.view.View.OnClickListener"/>
+    </data>
+
+    <LinearLayout
+        android:id="@+id/expenditureRowLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="1dp"
+        android:orientation="horizontal"
+        android:background="?attr/selectableItemBackground"
+        android:clickable="true">
+
+        <ImageView
+            android:id="@+id/expenditureRowIcon"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_margin="6dp"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/ic_circle"
+            android:contentDescription="@string/content_icon"
+            app:tint="@color/colorDeepGray" />
+
+        <LinearLayout
+            android:id="@+id/layoutRowCard"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/expenditureRowName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@{expenditure.name}"
+                android:textAppearance="?attr/textAppearanceSubtitle1" />
+
+            <TextView
+                android:id="@+id/expenditure_row_plan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                app:expenditureProgress="@{expenditure}"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/expenditure_row_fact"
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:gravity="center|end"
+            android:text="@{@string/formatter_money(expenditure.fact)}"
+            android:textAppearance="?attr/textAppearanceSubtitle1" />
+
+        <View
+            android:id="@+id/expenditureRowSpace"
+            android:layout_width="10dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0"
+            android:visibility="gone"/>
+
+        <Button
+            style="@style/Widget.App.Button.OutlinedButton.IconOnly"
+            android:id="@+id/expenditureRowMenu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:contentDescription="@string/btn_menu"
+            android:onClick="@{callback}"
+            app:icon="@drawable/ic_baseline_more_vert_24"/>
+    </LinearLayout>
+</layout>

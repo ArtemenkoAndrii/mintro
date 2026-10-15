@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <import type="android.view.View"/>
+        <variable name="messageTemplate" type="com.mas.mobile.domain.message.MessageTemplate"/>
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:clickable="false">
+        <LinearLayout
+            android:id="@+id/messageTemplateRow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:background="?attr/selectableItemBackground"
+            android:alpha="@{messageTemplate.enabled ? 1f : 0.4f}"
+            android:clickable="true"
+            android:padding="10dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?attr/textAppearanceSubtitle1"
+                android:text="@{messageTemplate.sender}" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@{messageTemplate.pattern.value}" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@{messageTemplate.example}" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</layout>

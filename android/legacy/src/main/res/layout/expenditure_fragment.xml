@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <import type="android.view.View"/>
+        <import type="com.mas.mobile.presentation.activity.converter.MoneyConverter"/>
+
+        <variable name="expenditure"
+            type="com.mas.mobile.presentation.viewmodel.ExpenditureViewModel"/>
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp">
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense.ExposedDropdownMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:hint="@string/hint_spending_expenditure"
+            android:enabled="@{expenditure.isEditable()}"
+            app:error="@{expenditure.nameError}"
+            app:errorEnabled='@{!(expenditure.nameError == "")}'>
+
+            <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                android:id="@+id/expenditureName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLength="30"
+                android:singleLine="true"
+                android:text="@={expenditure.name}" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:hint="@string/hint_expenditure_plan"
+            android:enabled="@{expenditure.isEditable()}">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number|numberDecimal"
+                android:maxLength="10"
+                android:singleLine="true"
+                android:text="@={expenditure.plan}"
+                app:onFocusLost="@{expenditure.plan}" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:hint="@string/hint_expenditure_fact"
+            android:enabled="false">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number|numberDecimal"
+                android:maxLength="10"
+                android:singleLine="true"
+                android:text="@={expenditure.fact}"
+                app:onFocusLost="@{expenditure.fact}" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:enabled="@{expenditure.isEditable()}">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/hint_expenditure_comment"
+                android:maxLength="100"
+                android:singleLine="true"
+                android:text="@={expenditure.comment}" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/expenditureSaveButton"
+            style="@style/Widget.MaterialComponents.Button.Icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:visibility="@{expenditure.isEditable() ? View.VISIBLE : View.GONE}"
+            android:text="@string/btn_save" />
+    </LinearLayout>
+</layout>

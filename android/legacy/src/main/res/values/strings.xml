@@ -1,0 +1,216 @@
+<resources>
+    <string name="app_name">MasMoney</string>
+
+    <!-- HINTS -->
+    <string name="hint_budget_name">name</string>
+    <string name="hint_budget_plan">plan</string>
+    <string name="hint_budget_fact">fact</string>
+    <string name="hint_budget_starts_on">start date</string>
+    <string name="hint_budget_last_day_at">end date</string>
+    <string name="hint_budget_comment">comment</string>
+    <string name="hint_budget_currency">currency</string>
+    <string name="hint_expenditure_name">name</string>
+    <string name="hint_expenditure_plan">plan</string>
+    <string name="hint_expenditure_fact">fact</string>
+    <string name="hint_expenditure_comment">comment</string>
+    <string name="hint_spending_amount">amount</string>
+    <string name="hint_spending_foreign_amount">foreign amount</string>
+    <string name="hint_spending_exchange_rate">rate</string>
+    <string name="hint_spending_comment">comment</string>
+    <string name="hint_spending_date">date</string>
+    <string name="hint_spending_expenditure">category</string>
+    <string name="hint_spending_recurrences">recurrences</string>
+    <string name="hint_message_new_message">new message</string>
+    <string name="hint_chart_expenditures">all categories</string>
+    <string name="hint_message_template_sender">sender</string>
+    <string name="hint_message_template_pattern">pattern</string>
+    <string name="hint_message_template_example">example</string>
+    <string name="hint_message_template_currency">currency</string>
+    <string name="hint_message_template_enabled">Enabled</string>
+    <string name="hint_category_name">name</string>
+    <string name="hint_description">description</string>
+    <string name="hint_category_plan">estimation</string>
+    <string name="hint_is_active">Include in budgets</string>
+    <string name="hint_merchant">add merchant here</string>
+
+    <!-- BUTTONS -->
+    <string name="btn_add">Add</string>
+    <string name="btn_save">Save</string>
+    <string name="btn_next">Next</string>
+    <string name="btn_close">Close</string>
+    <string name="btn_settings_month">month</string>
+    <string name="btn_settings_two_weeks">two weeks</string>
+    <string name="btn_settings_week">one week</string>
+    <string name="btn_settings_quarter">quarter</string>
+    <string name="btn_settings_year">year</string>
+    <string name="btn_spending_parse_message">Confirm</string>
+    <string name="btn_spending_cancel_message">Cancel</string>
+    <string name="btn_policy_agree">Agree</string>
+    <string name="btn_policy_decline">Decline</string>
+    <string name="btn_message_category">Select Category</string>
+    <string name="btn_message_accept">Accept</string>
+    <string name="btn_message_blacklist">Blacklist</string>
+    <string name="btn_menu">Menu</string>
+
+    <!-- MENU -->
+    <string name="menu_view">View</string>
+    <string name="menu_add">Add</string>
+    <string name="menu_edit">Edit</string>
+    <string name="menu_clone">Clone</string>
+    <string name="menu_remove">Remove</string>
+    <string name="menu_settings">Settings</string>
+    <string name="menu_budget_expenditures">See categories</string>
+    <string name="menu_budget_spendings">See spendings</string>
+    <string name="menu_budget_activate">Activate</string>
+    <string name="menu_budget_template">Template</string>
+    <string name="menu_budget_analytics">Analytics</string>
+    <string name="expenditure_list_row_spend_menu">Spend</string>
+    <string name="expenditure_list_row_report_menu">Report</string>
+    <string name="expenditure_list_row_more_menu">More</string>
+    <string name="menu_message_bind">Bind</string>
+    <string name="menu_spending_message_rules">Rules</string>
+    <string name="menu_spending">Spending</string>
+    <string name="menu_messages">Messages</string>
+    <string name="menu_message_template_list">Message Policies</string>
+    <string name="menu_expenditures">Home</string>
+    <string name="menu_budgets">Budgets</string>
+    <string name="menu_settings_period">Period</string>
+    <string name="menu_settings_currency">Currency</string>
+    <string name="menu_settings_start">Start Day</string>
+    <string name="menu_settings_notifications">Capture Notifications</string>
+    <string name="menu_settings_sms">Capture SMS</string>
+    <string name="menu_settings_discovery_mode">Autodetect</string>
+    <string name="menu_settings_backup_export">Export budgets</string>
+    <string name="menu_settings_backup_import">Import budgets</string>
+    <string name="menu_settings_about">About</string>
+    <string name="menu_settings_version">Version</string>
+    <string name="menu_settings_what_is">What is the MasHome?</string>
+    <string name="menu_analytics">Analysis</string>
+    <string name="menu_analytics_trends">Trends Analysis</string>
+    <string name="menu_analytics_alerts">Overspending Alerts</string>
+    <string name="menu_analytics_distribution">Expenditure Distribution</string>
+    <string name="menu_categories">Categories</string>
+    <string name="menu_home">Home</string>
+    <string name="menu_scheduled">Scheduled</string>
+    <string name="menu_menu">More</string>
+
+    <!-- DIALOG -->
+    <string name="dialog_confirmation_yes">Yes</string>
+    <string name="dialog_confirmation_no">No</string>
+    <string name="dialog_confirmation_gotit">Got it</string>
+    <string name="dialog_confirmation_remove">Are you sure?</string>
+    <string name="dialog_confirmation_ok">Ok</string>
+    <string name="dialog_confirmation_cancel">Cancel</string>
+    <string name="dialog_currency_title">Select currency</string>
+    <string name="dialog_blacklist">Do you really want to add %s to the blacklist?</string>
+
+    <!-- MESSAGES -->
+    <string name="message_budget_removing">Budgets can only be removed from the end.</string>
+    <string name="message_budget_date">You can change end date only for the last budget.</string>
+    <string name="message_allow_notifications">Please allow notification access for this application.</string>
+    <string name="message_link_merchant">Would you like to link %s to the \'%s\' category?</string>
+    <string name="message_spending_not_found">Unable to extract spending from message</string>
+    <string name="message_settings_start_day">Choose start day</string>
+    <string name="message_settings_period">Choose period</string>
+    <string name="message_capturing_disabled">Message capturing is not enabled. Would you like to enable it?</string>
+    <string name="message_analytics_no_alerts">Yahoo! You have no alerts!</string>
+    <string name="message_analytics_no_budgets">You do not have any completed budgets yet</string>
+    <string name="message_detected">New spending message detected:</string>
+    <string name="message_detected_confirmation">By clicking \'Confirm\', you agree to send this message to GPTChat for processing.</string>
+    <string name="message_backup_export_done">Budgets exported successfully.</string>
+    <string name="message_backup_import_done">Imported %1$d budget(s). Skipped %2$d already present.</string>
+    <string name="message_backup_failed">Something went wrong while processing the backup file.</string>
+
+    <!-- FORMATTER -->
+    <string name="formatter_money">%.2f</string>
+    <string name="formatter_percent_of">%d%% of %.2f</string>
+    <string name="formatter_unplanned">unplanned</string>
+    <string name="formatter_next_recurrences">%s (next: %s)</string>
+
+    <!-- VALIDATOR -->
+    <string name="validator_min_length">At least %d characters!</string>
+    <string name="validator_min_length_in_list">The `%s` should be at least %d characters!</string>
+    <string name="validator_only_future">The date should be greater than current</string>
+    <string name="validator_max_length">Max length is %d!</string>
+    <string name="validator_value_required">The value is required!</string>
+    <string name="validator_already_exists">Already exists</string>
+    <string name="validator_pattern_failed">Pattern doesn\'t match the example</string>
+
+    <!-- FRAGMENT TITLES -->
+    <string name="title_budget">Budget</string>
+    <string name="title_budget_list">Budgets</string>
+    <string name="title_budget_template">TEMPLATE</string>
+    <string name="title_expenditure">Expenditure</string>
+    <string name="title_expenditure_list">Expenditures</string>
+    <string name="title_spending">Spending</string>
+    <string name="title_spending_list">Spendings</string>
+    <string name="title_message_list">Messages</string>
+    <string name="title_template_message">Message Template</string>
+    <string name="title_template_message_list">Message Policies</string>
+    <string name="title_settings">Settings</string>
+    <string name="title_qualifier_list">Filters</string>
+    <string name="title_black_list">Sender\'s Blacklist</string>
+    <string name="title_analytics">Analytics</string>
+    <string name="title_chart">Chart</string>
+    <string name="title_menu">More</string>
+    <string name="title_category_list">Categories</string>
+    <string name="title_category">Category</string>
+    <string name="title_scheduled">Scheduled</string>
+
+    <!-- FRAGMENT LABELS -->
+    <string name="label_settings_period">Budget type</string>
+    <string name="label_settings_start">Start day</string>
+    <string name="label_app_version">Version: </string>
+    <string name="label_settings_budget">BUDGET</string>
+    <string name="label_settings_messages">MESSAGES</string>
+    <string name="label_settings_backup">BACKUP</string>
+    <string name="label_settings_about">ABOUT</string>
+    <string name="label_analytics_plan">Plan</string>
+    <string name="label_analytics_fact">Fact</string>
+    <string name="label_analytics_graphs">GRAPHS</string>
+    <string name="label_templates_settings">Senders</string>
+    <string name="label_templates_sources">Templates</string>
+    <string name="label_templates_autodetect">Autodetect</string>
+    <string name="label_templates_blacklist">Black list</string>
+    <string name="label_templates_filters">Filters</string>
+
+    <!-- Constants -->
+    <string name="constant_budget_truncated">The start date was automatically truncated. Original value is %s</string>
+    <string name="constant_yesterday">Yesterday</string>
+    <string name="constant_today">Today</string>
+    <string name="constant_period_week">One week</string>
+    <string name="constant_period_two_weeks">Two weeks</string>
+    <string name="constant_period_month">Month</string>
+    <string name="constant_period_quarter">Quarter</string>
+    <string name="constant_period_year">Year</string>
+    <string name="constant_recurrence_never">Never</string>
+    <string name="constant_recurrence_daily">Daily</string>
+    <string name="constant_recurrence_weekly">Weekly</string>
+    <string name="constant_recurrence_monthly">Monthly</string>
+    <string name="constant_recurrence_quarterly">Quarterly</string>
+
+    <!-- ERRORS -->
+    <string name="error_unexpected">Ups, something went wrong</string>
+
+    <!-- TABS -->
+    <string name="tab_qualifier_catch">Include words</string>
+    <string name="tab_qualifier_skip">Exclude words</string>
+    <string name="tab_qualifier_blacklist">Senders blacklist</string>
+
+    <!-- TOASTS -->
+    <string name="unexpected_error">Ups, something went wrong</string>
+
+    <!-- NOTIFICATION -->
+    <string name="notification_new_version_title">New Version Available</string>
+    <string name="notification_new_version_text">A new version of the app is available. Tap to update now!</string>
+    <string name="notification_update">Update</string>
+    <string name="notification_ignore">Ignore</string>
+
+    <string name="content_icon">Icon</string>
+    <string name="content_new_message">New message</string>
+
+    <!-- DESCRIPTION -->
+    <string name="desc_analytics_trends">Compare plan vs. fact budget trends</string>
+    <string name="desc_analytics_alerts">Persistent overspending in the last 3 budgets</string>
+    <string name="desc_analytics_distribution">Analysis of expenditure distribution</string>
+</resources>

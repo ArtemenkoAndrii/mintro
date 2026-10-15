@@ -1,0 +1,36 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name = "AppTheme" parent = "Theme.MaterialComponents.DayNight">
+        <!-- Customize your theme here. -->
+        <item name = "windowActionBar">true</item>
+        <item name = "windowNoTitle">true</item>
+    </style>
+
+    <style name="DefaultActionBar" parent="ThemeOverlay.MaterialComponents.Dark.ActionBar">
+        <item name="android:background">@color/colorPrimary</item>
+    </style>
+
+    <style name="DefaultActionBarPopup" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="android:background">@color/colorSurface</item>
+    </style>
+
+    <style name="Button.Card.Borderless" parent="@style/Widget.AppCompat.Button.Borderless.Colored">
+        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="android:paddingLeft">0dp</item>
+        <item name="android:paddingRight">0dp</item>
+        <item name="android:paddingTop">0dp</item>
+        <item name="android:paddingBottom">0dp</item>
+        <item name="android:minHeight">48dp</item>
+        <item name="android:minWidth">48dp</item>
+    </style>
+
+    <style name="Widget.App.Button.OutlinedButton.IconOnly" parent="Widget.MaterialComponents.Button.TextButton">
+        <item name="iconPadding">0dp</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="android:paddingLeft">12dp</item>
+        <item name="android:paddingRight">12dp</item>
+        <item name="android:minWidth">48dp</item>
+        <item name="android:minHeight">48dp</item>
+    </style>
+</resources>
